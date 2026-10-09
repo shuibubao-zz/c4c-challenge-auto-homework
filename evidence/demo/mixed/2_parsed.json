@@ -1,0 +1,138 @@
+[
+  {
+    "id": "1",
+    "text": "计算下列行列式的值：\n\n$$\nA = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 1 & 2 \\end{pmatrix}\n$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "A = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 1 & 2 \\end{pmatrix}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "2",
+    "text": "求下列矩阵的逆矩阵 $A^{-1}$：\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}\n$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}"
+      },
+      {
+        "type": "inline",
+        "latex": "A^{-1}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "3",
+    "text": "求下列矩阵的特征值和对应的特征向量：\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}\n$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "4",
+    "text": "解下列线性方程组：\n\n$$\n\\begin{cases}\n2x + y = 5 \\\\\nx + 3y = 5\n\\end{cases}\n$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "\\begin{cases}\n2x + y = 5 \\\\\nx + 3y = 5\n\\end{cases}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "5",
+    "text": "求下列矩阵的秩：\n\n$$\nA = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 1 & 1 & 1 \\end{pmatrix}\n$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 1 & 1 & 1 \\end{pmatrix}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "6",
+    "text": "求微分方程的通解：\n\n$$\ny'' + 3y' + 2y = 0\n$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "y'' + 3y' + 2y = 0"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "7",
+    "text": "求下列微分方程满足初始条件的特解：\n\n$$\n\\frac{dy}{dx} = 2xy\n$$\n\n初始条件为 $y(0) = 1$。",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "\\frac{dy}{dx} = 2xy"
+      },
+      {
+        "type": "inline",
+        "latex": "y(0) = 1"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "8",
+    "text": "求微分方程的通解：\n\n$$\ny'' - 4y' + 4y = 0\n$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "y'' - 4y' + 4y = 0"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "9",
+    "text": "求函数 $f(t) = \\sin(2t)$ 的拉普拉斯变换 $\\mathcal{L}{\\sin(2t)}$。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "f(t) = \\sin(2t)"
+      },
+      {
+        "type": "inline",
+        "latex": "\\mathcal{L}{\\sin(2t)}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "10",
+    "text": "求解常系数线性微分方程组 $\\dfrac{dx}{dt} = A x$ 的通解，其中系数矩阵\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}\n$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}"
+      },
+      {
+        "type": "inline",
+        "latex": "\\dfrac{dx}{dt} = A x"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  }
+]

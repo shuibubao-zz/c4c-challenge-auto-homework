@@ -1,0 +1,86 @@
+================================================================
+C4C 提交前核对
+================================================================
+
+[1] 必交文档（CHALLENGE.md §必须提交的文件）
+  [√] 卢怡然_C4C_方案设计.md（12,280 字节）
+  [√] 卢怡然_C4C_验证报告.md（16,661 字节）
+  [√] 卢怡然_C4C_教学说明.md（9,822 字节）
+  [√] 卢怡然_C4C_拿来说明.md（7,946 字节）
+  [√] 卢怡然_C4C_AI日志.md（19,999 字节）
+  [√] 卢怡然_C4C_作业原件.md（2,105 字节）
+  [√] 卢怡然_C4C_output.pdf（195,197 字节）
+
+[2] 可运行技能包
+  [√] .skill 与 manifest 记录的 sha256 一致（566,350 字节）
+  [√] 包内无 __pycache__  — 0 个
+  [√] 包内含 SKILL.md
+  [√] 包内含 pipeline.py
+  [√] 包内含 llm_client.py
+  [√] 包内含 solvers_linalg.py
+  [√] 包内含 solvers_ode.py
+  [√] 包内含 linear_algebra.yaml
+  [√] 包内含 differential_equations.yaml
+  [√] 包内含 demo.md
+  [√] 包内含 trace_problem5.md
+
+[3] 证据留档
+  [√] evidence/selftest_run.txt
+  [√] evidence/run/3_solutions.json
+  [√] evidence/run/run_report.json
+  [√] evidence/run/homework.pdf
+  [√] evidence/run/homework.tex
+  [√] evidence/skill_manifest.json
+
+[3b] 演示留档（docs/demo.md 所引用的全部产物）
+  [√] evidence/demo/homework.pdf
+  [√] evidence/demo/homework.tex
+  [√] evidence/demo/console_output.txt
+  [√] evidence/demo/mixed/homework.pdf
+  [√] evidence/demo/console_output_mixed.txt
+
+[3c] 主跑结果：12/12 求解、12/12 回验
+  [√] 主跑 12 题（应为 12）
+  [√] 主跑求解 12/12
+  [√] 主跑回验通过 12/12
+  [√] 第 11、12 题（非计算题）均被求解
+
+[3d] 混合域演示：10/10 求解回验
+  [√] 混合域工作表 10 题 10 解 10 验
+
+[3e] 编译质量：日志无缺字
+  [√] 主跑编译日志 Missing character × 0（应为 0）
+
+[3f] 新增文档资产
+  [√] homework-solver/docs/trace_problem5.md
+  [√] homework-solver/docs/demo.md
+  [√] homework-solver/domain_skills/differential_equations.yaml
+  [√] homework-solver/test_cases/test3_mixed_linalg_ode.md
+  [√] homework-solver/oracles/README.md
+  [√] oracles/README.md 含逐源蒸馏台账
+
+[3g] 文档编码：所有 .md 无乱码（可按 UTF-8 解码且含题目关键字）
+  [√] 卢怡然_C4C_方案设计.md UTF-8 解码正常
+  [√] 卢怡然_C4C_验证报告.md UTF-8 解码正常
+  [√] 卢怡然_C4C_教学说明.md UTF-8 解码正常
+  [√] 卢怡然_C4C_拿来说明.md UTF-8 解码正常
+  [√] 卢怡然_C4C_AI日志.md UTF-8 解码正常
+  [√] 卢怡然_C4C_作业原件.md UTF-8 解码正常
+
+[4] 一致性
+  [√] output.pdf 与 evidence/run/homework.pdf 字节一致
+  [√] run_report 的 Stage5 验证 7/7 项通过
+  [√] 自检输出为 45/45
+
+[5] 基线黄金
+  [√] golden/legacy_test1_solutions.json 未被污染
+  [√] golden/legacy_test1_parsed.json 未被污染
+  [√] golden/legacy_test2_solutions.json 未被污染
+  [√] golden/legacy_test2_parsed.json 未被污染
+
+[6] 诚实性：不许存在会误导的残留
+  [√] 无 LLM 调用留档时已附说明文件
+
+================================================================
+结果: 55/55 项通过
+================================================================

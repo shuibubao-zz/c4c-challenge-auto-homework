@@ -1,0 +1,335 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{ctex}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\geometry{margin=2.4cm}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{数学综合测验}
+\lhead{卢怡然}
+\rfoot{第 \thepage 页}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\definecolor{okgreen}{RGB}{0,110,60}
+\definecolor{warnred}{RGB}{170,30,30}
+\definecolor{llmgray}{RGB}{90,90,90}
+
+\newcommand{\problem}[1]{\subsection*{第 #1 题}}
+\newcommand{\solution}{\textbf{解答。}}
+\allowdisplaybreaks[3]
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries 作业解答} \\[0.5em]
+    {\large 数学综合测验} \\[0.3em]
+    卢怡然 \quad | \quad 2026-10-09
+\end{center}
+
+\hrule
+\vspace{1em}
+\setlength{\parskip}{0.35em}
+\problem{1}
+
+计算下列行列式的值：
+
+$$
+A = \begin{pmatrix} 2 & 1 & 0 \\ 1 & 3 & 1 \\ 0 & 1 & 2 \end{pmatrix}
+$$
+
+\solution
+
+设 $A = \begin{pmatrix} 2 & 1 & 0 \\ 1 & 3 & 1 \\ 0 & 1 & 2 \end{pmatrix}$。
+
+按行列式定义（或初等行变换化简）计算，得 $|A| = 8$。
+
+数值形式：$|A| = 8.00000000000000$。
+
+回验：换用 Berkowitz 算法重算，结果一致。
+
+\textbf{答案：}
+\[\boxed{8}\]
+
+\textcolor{okgreen}{【符号回验 2/2 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\problem{2}
+
+求下列矩阵的逆矩阵 $A^{-1}$：
+
+$$
+A = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}
+$$
+
+\solution
+
+设 $A = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}$，先算 $\det(A) = 1 \neq 0$，故 $A$ 可逆。
+
+用伴随矩阵法 / 初等行变换求得 $A^{-1} = \begin{pmatrix} 1 & -1 \\ -1 & 2 \end{pmatrix}$。
+
+回验：$A A^{-1} = A^{-1} A = I$（逐元素为零）。
+
+\textbf{答案：}
+{\small
+\[\begin{pmatrix} 1 & -1 \\ -1 & 2 \end{pmatrix}\]
+}
+
+\textcolor{okgreen}{【符号回验 3/3 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\problem{3}
+
+求下列矩阵的特征值和对应的特征向量：
+
+$$
+A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}
+$$
+
+\solution
+
+设 $A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}$。解特征方程 $\det(A - \lambda I) = 0$：
+
+特征多项式 $p(\lambda) = \lambda^{2} - 4 \lambda + 3 = \left(\lambda - 3\right) \left(\lambda - 1\right)$。
+
+故特征值为 $\lambda = 1, 3$（重数已在括号中给出）。
+
+对 $\lambda = 1$，解 $(A - 1I)x = 0$，得基础解系 $\begin{pmatrix} -1 \\ 1 \end{pmatrix}$（几何重数 $1$，代数重数 $1$）。
+
+对 $\lambda = 3$，解 $(A - 3I)x = 0$，得基础解系 $\begin{pmatrix} 1 \\ 1 \end{pmatrix}$（几何重数 $1$，代数重数 $1$）。
+
+\textbf{答案：}
+\[\boxed{1(重数1), 3(重数1)}\]
+
+\textcolor{okgreen}{【符号回验 6/6 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\problem{4}
+
+解下列线性方程组：
+
+$$
+\begin{cases}
+2x + y = 5 \\
+x + 3y = 5
+\end{cases}
+$$
+
+\solution
+
+将方程组写成矩阵形式 $Ax = b$，用高斯消元（或克拉默法则）求解。
+
+未知量为 $x, y$。
+
+解得 $x = 2, y = 1$。
+
+\textbf{答案：}
+\[\boxed{x = 2, y = 1}\]
+
+\textcolor{okgreen}{【符号回验 2/2 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\problem{5}
+
+求下列矩阵的秩：
+
+$$
+A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 1 & 1 \end{pmatrix}
+$$
+
+\solution
+
+设 $A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 1 & 1 \end{pmatrix}$，将其化为行阶梯形。
+
+行最简形为 $\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}$，主元列下标为 $(0, 1)$。
+
+非零行（主元）个数为 $2$，故 $\mathrm{rank}(A) = 2$。
+
+\textbf{答案：}
+\[\boxed{2}\]
+
+\textcolor{okgreen}{【符号回验 3/3 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\problem{6}
+
+求微分方程的通解：
+
+$$
+y'' + 3y' + 2y = 0
+$$
+
+\solution
+
+原方程：$y'' + 3y' + 2y = 0$。
+
+整理为标准形式 $2 y{\left(x \right)} + 3 \frac{d}{d x} y{\left(x \right)} + \frac{d^{2}}{d x^{2}} y{\left(x \right)} = 0$。
+
+这是一个二阶常系数线性微分方程，用特征方程法 / dsolve 求解。
+
+解得 $y{\left(x \right)} = \left(C_{1} + C_{2} e^{- x}\right) e^{- x}$。
+
+回验：把解代回原方程，残差为 0。
+
+\textbf{答案：}
+\[\boxed{\left(C_{1} + C_{2} e^{- x}\right) e^{- x}}\]
+
+\textcolor{okgreen}{【符号回验 1/1 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\problem{7}
+
+求下列微分方程满足初始条件的特解：
+
+$$
+\frac{dy}{dx} = 2xy
+$$
+
+初始条件为 $y(0) = 1$。
+
+\solution
+
+原方程：$\frac{dy}{dx} = 2xy$。
+
+整理为标准形式 $- 2 x y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 0$。
+
+这是一个一阶常系数线性微分方程，用特征方程法 / dsolve 求解。
+
+代入初值条件确定积分常数。
+
+解得 $y{\left(x \right)} = e^{x^{2}}$。
+
+回验：把解代回原方程，残差为 0。
+
+\textbf{答案：}
+\[\boxed{e^{x^{2}}}\]
+
+\textcolor{okgreen}{【符号回验 2/2 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\problem{8}
+
+求微分方程的通解：
+
+$$
+y'' - 4y' + 4y = 0
+$$
+
+\solution
+
+原方程：$y'' - 4y' + 4y = 0$。
+
+整理为标准形式 $4 y{\left(x \right)} - 4 \frac{d}{d x} y{\left(x \right)} + \frac{d^{2}}{d x^{2}} y{\left(x \right)} = 0$。
+
+这是一个二阶常系数线性微分方程，用特征方程法 / dsolve 求解。
+
+解得 $y{\left(x \right)} = \left(C_{1} + C_{2} x\right) e^{2 x}$。
+
+回验：把解代回原方程，残差为 0。
+
+\textbf{答案：}
+\[\boxed{\left(C_{1} + C_{2} x\right) e^{2 x}}\]
+
+\textcolor{okgreen}{【符号回验 1/1 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\problem{9}
+
+求函数 $f(t) = \sin(2t)$ 的拉普拉斯变换 $\mathcal{L}{\sin(2t)}$。
+
+\solution
+
+对 $\sin{\left(2 t \right)}$ 作拉普拉斯变换。
+
+利用常用变换对与线性性质，得 $\frac{2}{s^{2} + 4}$。
+
+\textbf{答案：}
+\[\boxed{\frac{2}{s^{2} + 4}}\]
+
+\textcolor{okgreen}{【符号回验 1/1 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\problem{10}
+
+求解常系数线性微分方程组 $\dfrac{dx}{dt} = A x$ 的通解，其中系数矩阵
+
+$$
+A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}
+$$
+
+\solution
+
+方程组 $\frac{dx}{dt} = Ax$，系数矩阵 $A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}$。
+
+这是常系数线性微分方程组。解法（跨域：用线性代数的特征分解）：求 $A$ 的特征值 $\lambda_i$ 与特征向量 $v_i$，则每个 $x_i(t) = e^{\lambda_i t} v_i$ 都是一个特解，线性组合即通解。
+
+求得特征对共 2 组，通解为 $x(t) = c_1 e^{1 t} \begin{pmatrix} -1 \\ 1 \end{pmatrix} + c_2 e^{3 t} \begin{pmatrix} 1 \\ 1 \end{pmatrix}$。
+
+回验：逐组验证 $Av = \lambda v$（线代侧）与 $x'(t) = Ax(t)$（ODE 侧），并检查基础解组线性无关。
+
+\textbf{答案：}
+{\small
+\[x(t) = c_1 e^{1 t} \begin{pmatrix} -1 \\ 1 \end{pmatrix} + c_2 e^{3 t} \begin{pmatrix} 1 \\ 1 \end{pmatrix}\]
+}
+
+\textcolor{okgreen}{【符号回验 6/6 项全部通过】}
+
+\vspace{0.8em}
+\hrule
+\vspace{0.8em}
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+题号 & 引擎 & 已求解 & 回验通过项 \\
+\midrule
+    1 & SymPy & 是 & 2/2 \\
+    2 & SymPy & 是 & 3/3 \\
+    3 & SymPy & 是 & 6/6 \\
+    4 & SymPy & 是 & 2/2 \\
+    5 & SymPy & 是 & 3/3 \\
+    6 & SymPy & 是 & 1/1 \\
+    7 & SymPy & 是 & 2/2 \\
+    8 & SymPy & 是 & 1/1 \\
+    9 & SymPy & 是 & 1/1 \\
+    10 & SymPy & 是 & 6/6 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent 共 10 题：已求解 10 题，其中通过符号回验 10 题。
+
+\end{document}

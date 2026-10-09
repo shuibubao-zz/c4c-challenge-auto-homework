@@ -1,0 +1,149 @@
+{
+  "input": "homework-solver/test_cases/test3_mixed_linalg_ode.md",
+  "output_dir": "evidence\\demo\\mixed",
+  "engine": "v2",
+  "llm": "关闭",
+  "total": 10,
+  "solved": 10,
+  "verified": 10,
+  "llm_fallback": 0,
+  "stage5": {
+    "ok": true,
+    "engine": "lualatex",
+    "pdf": "C:\\Users\\卢怡然\\Desktop\\C4C\\evidence\\demo\\mixed\\homework.pdf",
+    "size": 161116,
+    "checks": [
+      {
+        "id": "V1",
+        "name": "PDF 已生成且 > 1KB（161,116 字节）",
+        "ok": true
+      },
+      {
+        "id": "V6",
+        "name": "PDF 文件完整（含 %%EOF）",
+        "ok": true
+      },
+      {
+        "id": "V3",
+        "name": "编译日志无致命错误",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "id": "V7",
+        "name": "编译日志无缺字（Missing character × 0）",
+        "ok": true
+      },
+      {
+        "id": "V2",
+        "name": "页数 ≥ 1（实测 6 页）",
+        "ok": true
+      },
+      {
+        "id": "V4",
+        "name": "文本中无未解析引用（??）",
+        "ok": true
+      },
+      {
+        "id": "V5",
+        "name": "中文字符已正确嵌入（抽取到 826 个汉字）",
+        "ok": true
+      }
+    ],
+    "attempts": [
+      {
+        "ok": false,
+        "engine": "xelatex",
+        "error": "xelatex 未产出 PDF",
+        "log_tail": "on 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.10.8)  9 OCT 2026 16:20\nentering extended mode\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**C:/Users/卢怡然/Desktop/C4C/evidence/demo/mixed/homework.tex\n(c:/Users/卢怡然/Desktop/C4C/evidence/demo/mixed/homework.tex\nLaTeX2e <2026-06-01>\nL3 programming layer <2026-09-09>\n(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls\nDocument Class: article 2025/01/22 v1.4n Standard LaTeX document class\n(c:/texlive/2026/texmf-dist/tex/latex/base/size12.clo\nFile: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)\n"
+      },
+      {
+        "ok": false,
+        "engine": "pdflatex",
+        "size": 401599,
+        "checks": [
+          {
+            "id": "V1",
+            "name": "PDF 已生成且 > 1KB（401,599 字节）",
+            "ok": true
+          },
+          {
+            "id": "V6",
+            "name": "PDF 文件完整（含 %%EOF）",
+            "ok": true
+          },
+          {
+            "id": "V3",
+            "name": "编译日志无致命错误",
+            "ok": true,
+            "detail": ""
+          },
+          {
+            "id": "V7",
+            "name": "编译日志无缺字（Missing character × 2）",
+            "ok": false
+          },
+          {
+            "id": "V2",
+            "name": "页数 ≥ 1（实测 6 页）",
+            "ok": true
+          },
+          {
+            "id": "V4",
+            "name": "文本中无未解析引用（??）",
+            "ok": true
+          },
+          {
+            "id": "V5",
+            "name": "中文字符已正确嵌入（抽取到 822 个汉字）",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "ok": true,
+        "engine": "lualatex",
+        "size": 161116,
+        "checks": [
+          {
+            "id": "V1",
+            "name": "PDF 已生成且 > 1KB（161,116 字节）",
+            "ok": true
+          },
+          {
+            "id": "V6",
+            "name": "PDF 文件完整（含 %%EOF）",
+            "ok": true
+          },
+          {
+            "id": "V3",
+            "name": "编译日志无致命错误",
+            "ok": true,
+            "detail": ""
+          },
+          {
+            "id": "V7",
+            "name": "编译日志无缺字（Missing character × 0）",
+            "ok": true
+          },
+          {
+            "id": "V2",
+            "name": "页数 ≥ 1（实测 6 页）",
+            "ok": true
+          },
+          {
+            "id": "V4",
+            "name": "文本中无未解析引用（??）",
+            "ok": true
+          },
+          {
+            "id": "V5",
+            "name": "中文字符已正确嵌入（抽取到 826 个汉字）",
+            "ok": true
+          }
+        ]
+      }
+    ]
+  },
+  "elapsed_sec": 28.24
+}

@@ -1,0 +1,397 @@
+[
+  {
+    "problem_id": "1",
+    "problem_text": "计算下列行列式的值：\n\n$$\nA = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 1 & 2 \\end{pmatrix}\n$$",
+    "solved": true,
+    "steps": [
+      "设 $A = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 1 & 2 \\end{pmatrix}$。",
+      "按行列式定义（或初等行变换化简）计算，得 $|A| = 8$。",
+      "数值形式：$|A| = 8.00000000000000$。",
+      "回验：换用 Berkowitz 算法重算，结果一致。"
+    ],
+    "answer": "det = 8",
+    "answer_text": "det = 8",
+    "answer_latex": "8",
+    "validation": {
+      "passed": true,
+      "n_checks": 2,
+      "checks": [
+        {
+          "name": "两种算法一致 (det vs berkowitz_det)",
+          "ok": true,
+          "detail": "8 vs 8"
+        },
+        {
+          "name": "det(A)·det(A⁻¹)=1",
+          "ok": true,
+          "detail": "8·1/8=1"
+        }
+      ]
+    },
+    "solver": "solvers_linalg.determinant_solver",
+    "engine": "sympy",
+    "domain": "linear_algebra",
+    "concept_id": "determinant",
+    "classify_reason": "题干出现『行列式 / determinant』",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "2",
+    "problem_text": "求下列矩阵的逆矩阵 $A^{-1}$：\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}\n$$",
+    "solved": true,
+    "steps": [
+      "设 $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}$，先算 $\\det(A) = 1 \\neq 0$，故 $A$ 可逆。",
+      "用伴随矩阵法 / 初等行变换求得 $A^{-1} = \\begin{pmatrix} 1 & -1 \\\\ -1 & 2 \\end{pmatrix}$。",
+      "回验：$A A^{-1} = A^{-1} A = I$（逐元素为零）。"
+    ],
+    "answer": "A^-1 = [[1, -1], [-1, 2]]",
+    "answer_text": "A^-1 = [[1, -1], [-1, 2]]",
+    "answer_latex": "\\begin{pmatrix} 1 & -1 \\\\ -1 & 2 \\end{pmatrix}",
+    "validation": {
+      "passed": true,
+      "n_checks": 3,
+      "checks": [
+        {
+          "name": "A·A⁻¹ = I",
+          "ok": true,
+          "detail": "逐元素为零"
+        },
+        {
+          "name": "A⁻¹·A = I",
+          "ok": true,
+          "detail": "逐元素为零"
+        },
+        {
+          "name": "det(A)·det(A⁻¹) = 1",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    "solver": "solvers_linalg.matrix_inverse_solver",
+    "engine": "sympy",
+    "domain": "linear_algebra",
+    "concept_id": "matrix_inverse",
+    "classify_reason": "题干出现『逆矩阵 / 求逆』",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "3",
+    "problem_text": "求下列矩阵的特征值和对应的特征向量：\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}\n$$",
+    "solved": true,
+    "steps": [
+      "设 $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$。解特征方程 $\\det(A - \\lambda I) = 0$：",
+      "特征多项式 $p(\\lambda) = \\lambda^{2} - 4 \\lambda + 3 = \\left(\\lambda - 3\\right) \\left(\\lambda - 1\\right)$。",
+      "故特征值为 $\\lambda = 1, 3$（重数已在括号中给出）。",
+      "对 $\\lambda = 1$，解 $(A - 1I)x = 0$，得基础解系 $\\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix}$（几何重数 $1$，代数重数 $1$）。",
+      "对 $\\lambda = 3$，解 $(A - 3I)x = 0$，得基础解系 $\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$（几何重数 $1$，代数重数 $1$）。"
+    ],
+    "answer": "eigenvalues = ['1', '3']",
+    "answer_text": "eigenvalues = ['1', '3']",
+    "answer_latex": "1(重数1), 3(重数1)",
+    "validation": {
+      "passed": true,
+      "n_checks": 6,
+      "checks": [
+        {
+          "name": "λ=1 满足特征方程 det(A-λI)=0",
+          "ok": true,
+          "detail": "charpoly=\\lambda^{2} - 4 \\lambda + 3"
+        },
+        {
+          "name": "λ=3 满足特征方程 det(A-λI)=0",
+          "ok": true,
+          "detail": "charpoly=\\lambda^{2} - 4 \\lambda + 3"
+        },
+        {
+          "name": "Av = λv (λ=1, v=\\left[\\begin{matrix}-1 & 1\\end{matrix}\\right])",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Av = λv (λ=3, v=\\left[\\begin{matrix}1 & 1\\end{matrix}\\right])",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "Σλᵢ(含重数) = tr(A)",
+          "ok": true,
+          "detail": "tr(A)=4"
+        },
+        {
+          "name": "Πλᵢ(含重数) = det(A)",
+          "ok": true,
+          "detail": "det(A)=3"
+        }
+      ]
+    },
+    "solver": "solvers_linalg.eigen_decomposition_solver",
+    "engine": "sympy",
+    "domain": "linear_algebra",
+    "concept_id": "eigenvalues_eigenvectors",
+    "classify_reason": "题干出现『特征值 / 特征向量』",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "4",
+    "problem_text": "解下列线性方程组：\n\n$$\n\\begin{cases}\n2x + y = 5 \\\\\nx + 3y = 5\n\\end{cases}\n$$",
+    "solved": true,
+    "steps": [
+      "将方程组写成矩阵形式 $Ax = b$，用高斯消元（或克拉默法则）求解。",
+      "未知量为 $x, y$。",
+      "解得 $x = 2, y = 1$。"
+    ],
+    "answer": "{(2, 1)}",
+    "answer_text": "{(2, 1)}",
+    "answer_latex": "x = 2, y = 1",
+    "validation": {
+      "passed": true,
+      "n_checks": 2,
+      "checks": [
+        {
+          "name": "代回方程 2 x + y=5",
+          "ok": true,
+          "detail": "残差=0"
+        },
+        {
+          "name": "代回方程 x + 3 y=5",
+          "ok": true,
+          "detail": "残差=0"
+        }
+      ]
+    },
+    "solver": "solvers_linalg.linear_system_solver",
+    "engine": "sympy",
+    "domain": "linear_algebra",
+    "concept_id": "linear_system",
+    "classify_reason": "题干出现『方程组 / 通解』",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "5",
+    "problem_text": "求下列矩阵的秩：\n\n$$\nA = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 1 & 1 & 1 \\end{pmatrix}\n$$",
+    "solved": true,
+    "steps": [
+      "设 $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 1 & 1 & 1 \\end{pmatrix}$，将其化为行阶梯形。",
+      "行最简形为 $\\begin{pmatrix} 1 & 0 & -1 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 0 \\end{pmatrix}$，主元列下标为 $(0, 1)$。",
+      "非零行（主元）个数为 $2$，故 $\\mathrm{rank}(A) = 2$。"
+    ],
+    "answer": "rank = 2",
+    "answer_text": "rank = 2",
+    "answer_latex": "2",
+    "validation": {
+      "passed": true,
+      "n_checks": 3,
+      "checks": [
+        {
+          "name": "rank(A) = rank(Aᵀ)（秩的基本性质）",
+          "ok": true,
+          "detail": "2 vs 2"
+        },
+        {
+          "name": "主元个数 = 秩",
+          "ok": true,
+          "detail": "pivots=(0, 1)"
+        },
+        {
+          "name": "秩 ≤ min(m,n)",
+          "ok": true,
+          "detail": "2 ≤ 3"
+        }
+      ]
+    },
+    "solver": "solvers_linalg.matrix_rank_solver",
+    "engine": "sympy",
+    "domain": "linear_algebra",
+    "concept_id": "matrix_rank",
+    "classify_reason": "题干出现『秩 / rank』",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "6",
+    "problem_text": "求微分方程的通解：\n\n$$\ny'' + 3y' + 2y = 0\n$$",
+    "solved": true,
+    "steps": [
+      "原方程：$y'' + 3y' + 2y = 0$。",
+      "整理为标准形式 $2 y{\\left(x \\right)} + 3 \\frac{d}{d x} y{\\left(x \\right)} + \\frac{d^{2}}{d x^{2}} y{\\left(x \\right)} = 0$。",
+      "这是一个二阶常系数线性微分方程，用特征方程法 / dsolve 求解。",
+      "解得 $y{\\left(x \\right)} = \\left(C_{1} + C_{2} e^{- x}\\right) e^{- x}$。",
+      "回验：把解代回原方程，残差为 0。"
+    ],
+    "answer": "Eq(y(x), (C1 + C2*exp(-x))*exp(-x))",
+    "answer_text": "Eq(y(x), (C1 + C2*exp(-x))*exp(-x))",
+    "answer_latex": "\\left(C_{1} + C_{2} e^{- x}\\right) e^{- x}",
+    "validation": {
+      "passed": true,
+      "n_checks": 1,
+      "checks": [
+        {
+          "name": "解满足原方程（残差 = 0）",
+          "ok": true,
+          "detail": "残差 = 0"
+        }
+      ]
+    },
+    "solver": "solvers_ode.ode_general_solver",
+    "engine": "sympy",
+    "domain": "ordinary_differential_equations",
+    "concept_id": "ode_general",
+    "classify_reason": "兜底：识别出微分方程",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "7",
+    "problem_text": "求下列微分方程满足初始条件的特解：\n\n$$\n\\frac{dy}{dx} = 2xy\n$$\n\n初始条件为 $y(0) = 1$。",
+    "solved": true,
+    "steps": [
+      "原方程：$\\frac{dy}{dx} = 2xy$。",
+      "整理为标准形式 $- 2 x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 0$。",
+      "这是一个一阶常系数线性微分方程，用特征方程法 / dsolve 求解。",
+      "代入初值条件确定积分常数。",
+      "解得 $y{\\left(x \\right)} = e^{x^{2}}$。",
+      "回验：把解代回原方程，残差为 0。"
+    ],
+    "answer": "Eq(y(x), exp(x**2))",
+    "answer_text": "Eq(y(x), exp(x**2))",
+    "answer_latex": "e^{x^{2}}",
+    "validation": {
+      "passed": true,
+      "n_checks": 2,
+      "checks": [
+        {
+          "name": "解满足原方程（残差 = 0）",
+          "ok": true,
+          "detail": "残差 = 0"
+        },
+        {
+          "name": "满足初值条件 y{\\left(0 \\right)} = 1",
+          "ok": true,
+          "detail": "实际 = 1"
+        }
+      ]
+    },
+    "solver": "solvers_ode.ode_ivp_solver",
+    "engine": "sympy",
+    "domain": "ordinary_differential_equations",
+    "concept_id": "ode_ivp",
+    "classify_reason": "含 ODE 且给出初值条件",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "8",
+    "problem_text": "求微分方程的通解：\n\n$$\ny'' - 4y' + 4y = 0\n$$",
+    "solved": true,
+    "steps": [
+      "原方程：$y'' - 4y' + 4y = 0$。",
+      "整理为标准形式 $4 y{\\left(x \\right)} - 4 \\frac{d}{d x} y{\\left(x \\right)} + \\frac{d^{2}}{d x^{2}} y{\\left(x \\right)} = 0$。",
+      "这是一个二阶常系数线性微分方程，用特征方程法 / dsolve 求解。",
+      "解得 $y{\\left(x \\right)} = \\left(C_{1} + C_{2} x\\right) e^{2 x}$。",
+      "回验：把解代回原方程，残差为 0。"
+    ],
+    "answer": "Eq(y(x), (C1 + C2*x)*exp(2*x))",
+    "answer_text": "Eq(y(x), (C1 + C2*x)*exp(2*x))",
+    "answer_latex": "\\left(C_{1} + C_{2} x\\right) e^{2 x}",
+    "validation": {
+      "passed": true,
+      "n_checks": 1,
+      "checks": [
+        {
+          "name": "解满足原方程（残差 = 0）",
+          "ok": true,
+          "detail": "残差 = 0"
+        }
+      ]
+    },
+    "solver": "solvers_ode.ode_general_solver",
+    "engine": "sympy",
+    "domain": "ordinary_differential_equations",
+    "concept_id": "ode_general",
+    "classify_reason": "兜底：识别出微分方程",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "9",
+    "problem_text": "求函数 $f(t) = \\sin(2t)$ 的拉普拉斯变换 $\\mathcal{L}{\\sin(2t)}$。",
+    "solved": true,
+    "steps": [
+      "对 $\\sin{\\left(2 t \\right)}$ 作拉普拉斯变换。",
+      "利用常用变换对与线性性质，得 $\\frac{2}{s^{2} + 4}$。"
+    ],
+    "answer": "2/(s**2 + 4)",
+    "answer_text": "2/(s**2 + 4)",
+    "answer_latex": "\\frac{2}{s^{2} + 4}",
+    "validation": {
+      "passed": true,
+      "n_checks": 1,
+      "checks": [
+        {
+          "name": "与定义式积分数值一致（取 s=2）",
+          "ok": true,
+          "detail": "公式值=0.25, 积分值=0.25"
+        }
+      ]
+    },
+    "solver": "solvers_ode.laplace_transform_solver",
+    "engine": "sympy",
+    "domain": "ordinary_differential_equations",
+    "concept_id": "laplace_transform",
+    "classify_reason": "题干出现『拉普拉斯 / Laplace』",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "10",
+    "problem_text": "求解常系数线性微分方程组 $\\dfrac{dx}{dt} = A x$ 的通解，其中系数矩阵\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}\n$$",
+    "solved": true,
+    "steps": [
+      "方程组 $\\frac{dx}{dt} = Ax$，系数矩阵 $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$。",
+      "这是常系数线性微分方程组。解法（跨域：用线性代数的特征分解）：求 $A$ 的特征值 $\\lambda_i$ 与特征向量 $v_i$，则每个 $x_i(t) = e^{\\lambda_i t} v_i$ 都是一个特解，线性组合即通解。",
+      "求得特征对共 2 组，通解为 $x(t) = c_1 e^{1 t} \\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix} + c_2 e^{3 t} \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$。",
+      "回验：逐组验证 $Av = \\lambda v$（线代侧）与 $x'(t) = Ax(t)$（ODE 侧），并检查基础解组线性无关。"
+    ],
+    "answer": "x(t) = Σ c_i e^(λ_i t) v_i, 2 个特征对",
+    "answer_text": "x(t) = Σ c_i e^(λ_i t) v_i, 2 个特征对",
+    "answer_latex": "x(t) = c_1 e^{1 t} \\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix} + c_2 e^{3 t} \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}",
+    "validation": {
+      "passed": true,
+      "n_checks": 6,
+      "checks": [
+        {
+          "name": "Av = λv（λ=1）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "x(t)=e^{1t}v 满足 dx/dt = Ax",
+          "ok": true,
+          "detail": "残差=0"
+        },
+        {
+          "name": "Av = λv（λ=3）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "x(t)=e^{3t}v 满足 dx/dt = Ax",
+          "ok": true,
+          "detail": "残差=0"
+        },
+        {
+          "name": "Σλᵢ（含重数）= tr(A)",
+          "ok": true,
+          "detail": "tr(A) = 4"
+        },
+        {
+          "name": "基础解组线性无关（可组合出通解）",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    "solver": "solvers_ode.linear_ode_system_solver",
+    "engine": "sympy",
+    "domain": "ordinary_differential_equations",
+    "concept_id": "linear_ode_system",
+    "classify_reason": "跨域：含矩阵的线性微分方程组 dx/dt = Ax",
+    "sub_solutions": []
+  }
+]

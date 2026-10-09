@@ -1,0 +1,51 @@
+{
+  "source_file": "test3_mixed_linalg_ode.md",
+  "format": ".md",
+  "raw_text": "# 混合域测验：线性代数 + 常微分方程\n\n课程：数学综合测验 | 覆盖：线性代数（5 题）+ 常微分方程（4 题）+ 跨域综合（1 题） | 日期：2026-10-09\n\n---\n\n## 第 1 题\n\n计算下列行列式的值：\n\n$$\nA = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 1 & 2 \\end{pmatrix}\n$$\n\n## 第 2 题\n\n求下列矩阵的逆矩阵 $A^{-1}$：\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}\n$$\n\n## 第 3 题\n\n求下列矩阵的特征值和对应的特征向量：\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}\n$$\n\n## 第 4 题\n\n解下列线性方程组：\n\n$$\n\\begin{cases}\n2x + y = 5 \\\\\nx + 3y = 5\n\\end{cases}\n$$\n\n## 第 5 题\n\n求下列矩阵的秩：\n\n$$\nA = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 1 & 1 & 1 \\end{pmatrix}\n$$\n\n## 第 6 题\n\n求微分方程的通解：\n\n$$\ny'' + 3y' + 2y = 0\n$$\n\n## 第 7 题\n\n求下列微分方程满足初始条件的特解：\n\n$$\n\\frac{dy}{dx} = 2xy\n$$\n\n初始条件为 $y(0) = 1$。\n\n## 第 8 题\n\n求微分方程的通解：\n\n$$\ny'' - 4y' + 4y = 0\n$$\n\n## 第 9 题\n\n求函数 $f(t) = \\sin(2t)$ 的拉普拉斯变换 $\\mathcal{L}{\\sin(2t)}$。\n\n## 第 10 题\n\n求解常系数线性微分方程组 $\\dfrac{dx}{dt} = A x$ 的通解，其中系数矩阵\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}\n$$\n",
+  "sections": [
+    {
+      "title": "混合域测验：线性代数 + 常微分方程",
+      "content": "课程：数学综合测验 | 覆盖：线性代数（5 题）+ 常微分方程（4 题）+ 跨域综合（1 题） | 日期：2026-10-09\n\n---"
+    },
+    {
+      "title": "第 1 题",
+      "content": "计算下列行列式的值：\n\n$$\nA = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 1 & 2 \\end{pmatrix}\n$$"
+    },
+    {
+      "title": "第 2 题",
+      "content": "求下列矩阵的逆矩阵 $A^{-1}$：\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}\n$$"
+    },
+    {
+      "title": "第 3 题",
+      "content": "求下列矩阵的特征值和对应的特征向量：\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}\n$$"
+    },
+    {
+      "title": "第 4 题",
+      "content": "解下列线性方程组：\n\n$$\n\\begin{cases}\n2x + y = 5 \\\\\nx + 3y = 5\n\\end{cases}\n$$"
+    },
+    {
+      "title": "第 5 题",
+      "content": "求下列矩阵的秩：\n\n$$\nA = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 1 & 1 & 1 \\end{pmatrix}\n$$"
+    },
+    {
+      "title": "第 6 题",
+      "content": "求微分方程的通解：\n\n$$\ny'' + 3y' + 2y = 0\n$$"
+    },
+    {
+      "title": "第 7 题",
+      "content": "求下列微分方程满足初始条件的特解：\n\n$$\n\\frac{dy}{dx} = 2xy\n$$\n\n初始条件为 $y(0) = 1$。"
+    },
+    {
+      "title": "第 8 题",
+      "content": "求微分方程的通解：\n\n$$\ny'' - 4y' + 4y = 0\n$$"
+    },
+    {
+      "title": "第 9 题",
+      "content": "求函数 $f(t) = \\sin(2t)$ 的拉普拉斯变换 $\\mathcal{L}{\\sin(2t)}$。"
+    },
+    {
+      "title": "第 10 题",
+      "content": "求解常系数线性微分方程组 $\\dfrac{dx}{dt} = A x$ 的通解，其中系数矩阵\n\n$$\nA = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}\n$$"
+    }
+  ]
+}

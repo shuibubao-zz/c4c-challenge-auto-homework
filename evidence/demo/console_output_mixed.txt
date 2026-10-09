@@ -1,0 +1,55 @@
+  [T-box] Loaded 18 classification rules from calculus_limits.yaml
+================================================================
+作业自动求解流水线（C4C · 国产模型版）
+   输入: homework-solver/test_cases/test3_mixed_linalg_ode.md
+   输出: evidence\demo\mixed
+   引擎: v2   LLM: 关
+================================================================
+
+[Stage 1] 文档摄入
+   格式: .md，分段: 11
+
+[Stage 2] 题目解析
+   识别题目: 10 道
+      第 1 题 [conceptual]
+      第 2 题 [conceptual]
+      第 3 题 [conceptual]
+      第 4 题 [conceptual]
+      第 5 题 [conceptual]
+      第 6 题 [conceptual]
+      第 7 题 [conceptual]
+      第 8 题 [conceptual]
+      第 9 题 [conceptual]
+      第 10 题 [conceptual]
+
+[Stage 3] 自动求解
+   已加载域: ['calculus_1_limits_and_derivatives', 'ordinary_differential_equations', 'linear_algebra']
+   求解 10/10，通过符号回验 10，LLM 兜底 0，耗时 1.6s
+      √ 第 1 题 [sympy] 8
+      √ 第 2 题 [sympy] \begin{pmatrix} 1 & -1 \\ -1 & 2 \end{pmatrix}
+      √ 第 3 题 [sympy] 1(重数1), 3(重数1)
+      √ 第 4 题 [sympy] x = 2, y = 1
+      √ 第 5 题 [sympy] 2
+      √ 第 6 题 [sympy] \left(C_{1} + C_{2} e^{- x}\right) e^{- x}
+      √ 第 7 题 [sympy] e^{x^{2}}
+      √ 第 8 题 [sympy] \left(C_{1} + C_{2} x\right) e^{2 x}
+      √ 第 9 题 [sympy] \frac{2}{s^{2} + 4}
+      √ 第 10 题 [sympy] x(t) = c_1 e^{1 t} \begin{pmatrix} -1 \\ 1 \en
+
+[Stage 4] LaTeX 生成
+   evidence\demo\mixed\homework.tex (7,914 字节)
+
+[Stage 5] 编译与验证
+   本机可用引擎: ['xelatex', 'pdflatex', 'lualatex']
+      [√] PDF 已生成且 > 1KB（161,116 字节）
+      [√] PDF 文件完整（含 %%EOF）
+      [√] 编译日志无致命错误
+      [√] 编译日志无缺字（Missing character × 0）
+      [√] 页数 ≥ 1（实测 6 页）
+      [√] 文本中无未解析引用（??）
+      [√] 中文字符已正确嵌入（抽取到 826 个汉字）
+   PDF: C:\Users\卢怡然\Desktop\C4C\evidence\demo\mixed\homework.pdf (161,116 字节，引擎 lualatex)
+
+================================================================
+完成：10 题 / 求解 10 / 回验通过 10 / 耗时 28.24s
+================================================================
